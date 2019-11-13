@@ -1,0 +1,57 @@
+<!--
+    FILE: /~sgiorlan/sgiorlan_assign6.html
+    91.61 GUI Programming I Assignment No.6: Creating An Interactive Dynamic Table
+    Scott T. Giorlando, UMass Lowell Computer Science, scott_giorlando@student.uml.edu
+    File Created on: 11/11/2019 2:40 PM.
+        Updated by STG on 11/12/2019 12:20 PM
+
+    File Description: This file is a webpage that shows the user a form where they can enter
+    a range of numbers.  Once they enter the numbers a multiplication table is created from the beginning
+    of their range to the end of their range specified.  This table is also limited in range, and does not allow
+    the user to enter any type of letters or symbols that are not represented as letters.
+
+    This file did pass all the validators that need to be used.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Interactive Multiplication Table</title>
+    <link href="css/hw6stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--
+      In this div I have a form that will take in user input which is a starting number and an ending number for two separte inputs,
+      a multiplier and a multiplicand.
+    -->
+
+    <div id = "userInput">
+        <h1 id = "header">Interactive Multiplication Table</h1>
+        <form id = "userForm">
+          <label for="firstMultiplier">Starting Number (Multiplier)</label>
+          <input type ="number" id = "firstMultiplier" placeholder="Please enter any non-negative integer">
+
+          <label for="lastMultiplier">Ending Number (Multiplier)</label>
+          <input type ="number" id = "lastMultiplier" placeholder="Please enter any integer larger than your first integer">
+
+          <label for="firstMultiplicand">Starting Number (Multiplicand)</label>
+          <input type ="number" id = "firstMultiplicand" placeholder="Please enter any non-negative integer">
+
+          <label for="lastMultiplicand">Ending Number (Multiplicand)</label>
+          <input type ="number" id = "lastMultiplicand" placeholder="Please enter any integer larger than your first integer">
+
+          <input type = "submit" value="Submit Numbers">
+          <div id = "userSubmission">
+          </div>
+        </form>
+    </div>
+    <div id = "tableOutput">
+      <table id = tOutput>
+      </table>
+    </div>
+    <!--
+    This calls my script file hw6script.js
+  -->
+   <script src="js/hw6script.js"></script>
+  </body>
+</html>
